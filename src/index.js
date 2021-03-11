@@ -1,7 +1,11 @@
+/**
+ * 자바 스크립트 인문
+ */
+// // 01
 // console.log("안녕하세요");
 // console.log("JavaScript 를 배워봅시다!");
 
-// // 변수
+// // 02. 변수
 // let value = 1;
 // console.log(value);
 // value = 2;
@@ -38,7 +42,7 @@
 // // 고의적으로 설정하는 값을 의미하고, undefined는 우리가 설정하지 않았기 때문에
 // // 없는 값을 의미한다.
 
-// // 연산자
+// // 03. 연산자
 // // 대입 연산자
 // let value = 1;
 // value = 2;
@@ -160,3 +164,52 @@
 // const a = '안녕';
 // const b = '하세요';
 // console.log(a + b);
+
+// // 04. 조건문
+// // if문
+// const a = 1;
+// if (a + 1 === 2) {
+//   console.log('a + 1 이 2 입니다.');
+// }
+
+// const a = 1;
+// if (true) {
+//   const a = 2;
+//   console.log('if문 안의 a 값은 ' + a);
+// }
+// console.log('if문 밖의 a 값은 ' + a);
+
+// //if-else 문
+// const a = 10;
+// if (a > 15) {
+//   console.log('a 가 15 큽니다.');
+// } else {
+//   console.log('a 가 15보다 크지 않습니다.');
+// }
+
+// // if-else if 문
+// const a = 10;
+// if (a === 5) {
+//   console.log('5입니다!');
+// } else if (a === 10) {
+//   console.log('10입니다!');
+// } else {
+//   console.log('5도 아니고 10도 아닙니다.');
+// }
+
+// // switch/case 문
+// const device = 'iphone';
+
+// switch (device) {
+//   case 'iphone':
+//     console.log('아이폰!');
+//     break;
+//   case 'ipad':
+//     console.log('아이패드!');
+//     break;
+//   case 'galaxy note':
+//     console.log('갤럭시 노트!');
+//     break;
+//   default:
+//     console.log('모르겠네요..');
+// }

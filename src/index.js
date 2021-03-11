@@ -493,3 +493,101 @@
 // });
 
 // console.log(objects.length);
+
+/**
+ *  08. 반복문
+ */
+// for
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// for (let i = 10; i > 0; i--) {
+//   console.log(i);
+// }
+
+// // 배열과 for
+// const names = ['멍멍이', '야옹이', '멍뭉이'];
+
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
+
+// // while
+// let i = 0;
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+// }
+
+// // for ... of
+// let numbers = [10, 20, 30, 40, 50];
+// for(let number of numbers) {
+//   console.log(number);
+// }
+
+// // 객체를 위한 반복문 for...in
+// const doggy = {
+//   name: '멍멍이',
+//   sound: '멍멍',
+//   age: 2
+// };
+
+// console.log(Object.entries(doggy));
+// console.log(Object.keys(doggy));
+// console.log(Object.values(doggy));
+
+// Object.entries: [[키, 값], [키, 값]] 형태의 배열로 변환
+// Object.keys: [키, 키, 키] 형태의 배열로 변환
+// Object.values: [값, 값, 값] 형태의 배열로 변환
+
+// const doggy = {
+//   name: '멍멍이',
+//   sound: '멍멍',
+//   age: 2
+// };
+
+// for (let key in doggy) {
+//   console.log(`${key}: ${doggy[key]}`);
+// }
+
+// // breack 와 continue
+// for (let i = 0; i < 10; i++) {
+//   if (i === 2) continue; // 다음 루프를 실행
+//   console.log(i);
+//   if (i === 5) break; // 반복문을 끝내기
+// }
+
+// // 연습
+// function sumOf(numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   return sum;
+// }
+
+// const result = sumOf([1, 2, 3, 4, 5]);
+// console.log(result);
+
+// // 퀴즈
+// function biggerThanThree(numbers) {
+//   let array = [];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] > 3) {
+//       array[i] = i;
+//     }
+//   }
+//   return array;
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+// console.log(biggerThanThree(numbers));
+
+// // 퀴즈 답
+// function biggerThanThree(numbers) {
+//   return numbers.filter((number) => number > 3);
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+// console.log(biggerThanThree(numbers));

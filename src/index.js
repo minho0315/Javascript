@@ -591,3 +591,232 @@
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7];
 // console.log(biggerThanThree(numbers));
+
+/**
+ *  09. 배열 내장함수
+ */
+//단순 반복이라면 for( ),
+//배열을 순회하려면 forEach( ),
+//배열을 순회 후 새 배열을 얻고 싶다면 map( ) 사용할 것을 권장
+// // forEach
+// // forEach 함수의 파라미터로는, 각 원소에 대하여 처리하고 싶은 코드를 함수로 넣어준다.
+// const superheros = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+// for (let i = 0; i < superheros.length; i++) {
+//   console.log(superheros[i]);
+// }
+
+// // 콜백함수 : 함수형태의 파라미터를 전달하는 것
+// const superheros = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+// superheros.forEach((hero) => {
+//   console.log(hero);
+// });
+
+// map
+// map 함수의 파라미터로는 변화를 주는 함수를 전달해준다.
+// 변화함수라고 부른다.
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const squared = [];
+// for (let i = 0; i < array.length; i++) {
+//   squared.push(array[i] * array[i]);
+// }
+
+// console.log(squared);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const squared = [];
+
+// array.forEach((n) => {
+//   squared.push(n * n);
+// });
+
+// console.log(squared);
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// const square = (n) => n * n;
+// const squared = array.map(square);
+// console.log(squared);
+
+// // indexOf
+// // 원하는 항목이 몇번째 원소인지 찾아주는 함수이다.
+// const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+// const index = superheroes.indexOf('토르');
+// console.log(index);
+
+// // findIndex
+// // 리스트 안에 있는 값이 객체이거나, 배열일때 사용
+// const todos = [
+//   {
+//     id: 1,
+//     text: '자바스크립트 입문',
+//     done: true
+//   },
+//   {
+//     id: 2,
+//     text: '함수 배우기',
+//     done: true
+//   },
+//   {
+//     id: 3,
+//     text: '객체와 배열 배우기',
+//     done: true
+//   },
+//   {
+//     id: 4,
+//     text: '배열 내장함수 배우기',
+//     done: false
+//   }
+// ];
+
+// const index = todos.findIndex(todo => todo.id === 3);
+// console.log(index);
+
+// // find
+// // 찾아낸 값 자체를 반환한다.
+// const todos = [
+//   {
+//     id: 1,
+//     text: '자바스크립트 입문',
+//     done: true
+//   },
+//   {
+//     id: 2,
+//     text: '함수 배우기',
+//     done: true
+//   },
+//   {
+//     id: 3,
+//     text: '객체와 배열 배우기',
+//     done: true
+//   },
+//   {
+//     id: 4,
+//     text: '배열 내장함수 배우기',
+//     done: false
+//   }
+// ];
+
+// const todo = todos.find((todo) => todo.id === 3);
+// console.log(todo);
+
+// // filter
+// // 배열에서 특정 조건을 만족하는 값들만 따로 추출하여 새로운 배열을 만든다.
+// // filter에 넣어준 함수에서 true를 반환하면 새로운 배열에 따로 추출
+// const todos = [
+//   {
+//     id: 1,
+//     text: '자바스크립트 입문',
+//     done: true
+//   },
+//   {
+//     id: 2,
+//     text: '함수 배우기',
+//     done: true
+//   },
+//   {
+//     id: 3,
+//     text: '객체와 배열 배우기',
+//     done: true
+//   },
+//   {
+//     id: 4,
+//     text: '배열 내장함수 배우기',
+//     done: false
+//   }
+// ];
+
+// //const tasksNotDone = todos.filter((todo) => todo.done === false);
+// const tasksNotDone = todos.filter((todo) => !todo.done);
+// console.log(tasksNotDone);
+
+// // splice
+// // 배열에서 특정 항목을 제거할 때 사용
+// const numbers = [10, 20, 30, 40];
+// const index = numbers.indexOf(30);
+// numbers.splice(index, 1);
+// console.log(numbers);
+
+// // slice
+// // 두개의 파라미터 시작점 , 끝점을 정한다.
+// // 기존의 배열을 건드리지 않는다.
+// const numbers = [10,20, 30 ,40];
+// const sliced = numbers.slice(0,2); // 0부터 시작해서 2전까지
+
+// console.log(sliced); // [10,20]
+// console.log(numbers); // [10, 20, 30 ,40]
+
+// // shift 와 pop
+// // shitf는 첫번째 원소를 배열에서 추출해준다.(추출하는 과정에서 배열에서 해당 원소는 사라진다.)
+// const numbers = [10, 20, 30, 40];
+// const value = numbers.shift();
+// console.log(value);
+// console.log(numbers);
+
+// // pop은 배열의 맨 마지막 항목을 추출
+// const numbers = [10, 20, 30, 40];
+// const value = numbers.pop();
+// console.log(value);
+// console.log(numbers);
+
+// // unshift
+// // 배열의 맨 앞에 새 원소를 추가
+// const numbers = [10, 20, 30, 40];
+// numbers.unshift(5);
+// console.log(numbers);
+
+// // concat
+// // 여러개의 배열을 하나의 배열로 합쳐준다.
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const concated = arr1.concat(arr2);
+
+// console.log(concated);
+
+// // join
+// // 배열 안의 값들을 문자열 형태로 합쳐준다.
+// const array = [1, 2, 3, 4, 5];
+// console.log(array.join()); // 1,2,3,4,5
+// console.log(array.join(' ')); // 1 2 3 4 5
+// console.log(array.join(', ')); // 1, 2, 3, 4, 5
+
+// // reduce
+// 첫번째 파라미터는 콜백함수, 두번째 파라미터는 초기값
+// const numbers = [1, 2, 3, 4, 5];
+
+// let sum = 0;
+// numbers.forEach((n) => {
+//   sum += n;
+// });
+// console.log(sum);
+
+// const numbers = [1, 2, 3, 4, 5];
+// let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+// console.log(sum);
+
+// const numbers = [1, 2, 3, 4, 5];
+// let sum = numbers.reduce((accumulator, current) => {
+//   console.log({ accumulator, current });
+//   return accumulator + current;
+// }, 0);
+
+// console.log(sum);
+
+// const numbers = [1, 2, 3, 4, 5];
+// let sum = numbers.reduce((accumulator, current, index, array) => {
+//   if (index === array.length - 1) {
+//     return (accumulator + current) / array.length;
+//   }
+//   return accumulator + current;
+// }, 0);
+
+// console.log(sum);
+
+// // 퀴즈
+// function countBiggerThanTen(numbers) {
+//   return numbers.filter((number) => number > 10).length;
+// }
+
+// const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+// console.log(count); //5

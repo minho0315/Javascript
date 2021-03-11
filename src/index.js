@@ -283,3 +283,182 @@
 
 // const add = (a, b) => a + b;
 // console.log(add(1, 2));
+
+/**
+ *  06. 객체
+ */
+// const dog = {
+//   name: '멍멍이',
+//   age: 2
+// };
+
+// console.log(dog.name);
+// console.log(dog.age);
+
+// const sample = {
+//   'key with space': true
+// };
+
+// const ironMan = {
+//   name: '토니 스타크',
+//   actor: '로버트 다우니 주니어',
+//   alias: '아이언맨'
+// };
+
+// const captainAmerica = {
+//   name: '스티븐 로저스',
+//   actor: '크리스 에반스',
+//   alias: '캡틴 아메리카'
+// };
+
+// console.log(ironMan);
+// console.log(captainAmerica);
+
+// // 함수에서 객체를 파라미터로 받기
+// const ironMan = {
+//   name: '토니 스타크',
+//   actor: '로버트 다우니 주니어',
+//   alias: '아이언맨'
+// };
+
+// const captainAmerica = {
+//   name: '스티븐 로저스',
+//   actor: '크리스 에반스',
+//   alias: '캡틴 아메리카'
+// };
+
+// function print(hero) {
+//   const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
+//   console.log(text);
+// }
+
+// print(ironMan);
+// print(captainAmerica);
+
+// 객체 비구조화 할당 (객체 구조 분해)
+// 객체에서 값들을 추출해서 새로운 상수로 선언
+// const ironMan = {
+//   name: '토니 스타크',
+//   actor: '로버트 다우니 주니어',
+//   alias: '아이언맨'
+// };
+
+// const captainAmerica = {
+//   name: '스티븐 로저스',
+//   actor: '크리스 에반스',
+//   alias: '캡틴 아메리카'
+// };
+
+// function print(hero) {
+//   const {alias, name, actor} = hero;
+//   const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+//   console.log(text);
+// }
+
+// print(ironMan);
+// print(captainAmerica);
+
+// const ironMan = {
+//   name: '토니 스타크',
+//   actor: '로버트 다우니 주니어',
+//   alias: '아이언맨'
+// };
+
+// const captainAmerica = {
+//   name: '스티븐 로저스',
+//   actor: '크리스 에반스',
+//   alias: '캡틴 아메리카'
+// };
+
+// function print({ alias, name, actor }) {
+//   const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
+//   console.log(text);
+// }
+
+// print(ironMan);
+// print(captainAmerica);
+
+// // 객체 안에 함수 넣기
+// // 함수가 객체 안에 들어가게 되면, this는 자신이 속해 있는 객체르 가르키게 된다.
+// const dog = {
+//   name: '멍멍이',
+//   sound: '멍멍!',
+//   say: function say() {
+//     console.log(this.sound);
+//   }
+// };
+
+// dog.say();
+
+// // 함수를 선언 할 때에는 이름이 없어도 된다.
+// const dog = {
+//   name: '멍멍이',
+//   sound: '멍멍!',
+//   say: function () {
+//     console.log(this.sound);
+//   }
+// };
+
+// dog.say();
+// 객체 안에 함수를 넣을 때, 화살표 함수를 선언한다면 제대로 작동하지 않는다.
+// 이유는 function으로 선언한 함수는 this가 제대로 자신이 속한 객체를 가르키게 되는데,
+// 화살표 함수는 그렇지 않기 때문이다.
+
+// // Getter 함수와 Setter 함수
+// const numbers = {
+//   a: 1,
+//   b: 2
+// };
+
+// numbers.a = 5;
+// console.log(numbers);
+
+// Getter 함수는 특정 값을 조회 할 때 우리가 설정한 연산된 값을 반환한다.
+// get 키워드
+// const numbers = {
+//   a: 1,
+//   b: 2,
+//   get sum() {
+//     console.log('sum 함수가 실행됩니다!');
+//     return this.a + this.b;
+//   }
+// };
+
+// console.log(numbers.sum);
+// numbers.b = 5;
+// console.log(numbers.sum);
+
+// // Setter 함수는 set 키워드
+// const numbers = {
+//   _a: 1,
+//   _b: 2,
+//   sum: 3,
+//   calculate() {
+//     console.log('calculate');
+//     this.sum = this._a + this._b;
+//   },
+//   get a() {
+//     return this._a;
+//   },
+//   get b() {
+//     return this._b;
+//   },
+//   set a(value) {
+//     console.log('a가 바뀝니다.');
+//     this._a = value;
+//     this.calculate();
+//   },
+//   set b(value) {
+//     console.log('b가 바뀝니다.');
+//     this._b = value;
+//     this.calculate();
+//   }
+// };
+
+// console.log(numbers.sum);
+// numbers.a = 5;
+// numbers.b = 7;
+// numbers.a = 9;
+// console.log(numbers.sum);
+// console.log(numbers.sum);
+// console.log(numbers.sum);

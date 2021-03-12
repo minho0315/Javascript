@@ -553,3 +553,50 @@
 // }
 // const result = max(1, 2, 3, 4, 10, 5, 6, 7);
 // console.log(result);
+
+/**
+ * 08. 자바스크립트의 Scope에 대한 이해
+ */
+// Scope란, 우리가 변수 혹은 함수를 선언하게 될 때
+// 해당 변수 또는 함수가 유효한 범위를 의미한다.
+// const value = 'hello';
+
+// function myFunction() {
+//   console.log('myFunction: ');
+//   console.log(value);
+// }
+
+// function otherFunction() {
+//   console.log('otherFunction: ');
+//   const value = 'bye!';
+//   console.log(value);
+// }
+
+// myFunction();
+// otherFunction();
+
+// console.log('global scope: ');
+// console.log(value);
+
+// const value = 'hello';
+
+// function myFunction() {
+//   const value = 'bye!';
+//   const anotherValue = 'world';
+//   function functionInside() {
+//     console.log('functionInside: ');
+//     console.log(value);
+//     console.log(anotherValue);
+//   }
+// }
+
+// myFunction();
+// console.log('global scope: ');
+// console.log(value);
+// console.log(anotherValue);
+
+// Hoisting 이해하기
+// 자바스크립트 엔진이 코드를 해석할 때 에러를 발생 안시키는행위
+// Hoisting은 자바스크립트 엔진이 갖고 있는 성질이며 방지하는게 좋다.
+// var대신 const let을 사용하는 이유다.
+// ESLint를 사용하여 발견 가능하다.

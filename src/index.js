@@ -123,3 +123,89 @@
 // const value = { a: 1 };
 // const truthy = value ? true : false;
 // const trythy = !!value;
+
+/**
+ * 단축 평가 (short-circuit evaluation) 논리 계산법
+ */
+// const dog = {
+//   name: '멍멍이'
+// };
+
+// function getName(animal) {
+//   return animal.name;
+// }
+
+// const name = getName(dog);
+// console.log(name); //멍멍이
+
+// const dog = {
+//   name: '멍멍이'
+// };
+
+// function getName(animal) {
+//   return animal.name;
+// }
+
+// const name = getName();
+// console.log(name); //멍멍이
+
+// const dog = {
+//   name: '멍멍이'
+// };
+
+// function getName(animal) {
+//   if (animal) {
+//     return animal.name;
+//   }
+//   return undefined;
+// }
+
+// const name = getName();
+// console.log(name); //멍멍이
+
+// && 연산자로 코드 단축시키기
+// A && B 연산자를 사용하게 될때에는
+// A 가 Truthy 한 값이라면, B가 결과 값으로 출력
+// A 가 Falsy 한 값이라면 결과는 A
+// const dog = {
+//   name: '멍멍이'
+// };
+
+// function getName(animal) {
+//   return animal && animal.name;
+// }
+
+// //const name = getName();
+// const name = getName(dog);
+// console.log(name); //멍멍이
+
+// const namelessDog = {
+//   name: ''
+// };
+
+// function getName(animal) {
+//   const name = animal && animal.name;
+//   if (!name) {
+//     return '이름이 없는 동물입니다';
+//   }
+//   return name;
+// }
+
+// console.log(namelessDog.name);
+// const name = getName(namelessDog);
+// console.log(name); // 이름이 없는 동물입니다.
+
+// A || B 연산자
+// A 가 Truthy할 경우 결과는 A
+// A 가 Falsy하다면 결과는 B
+// const namelessDog = {
+//   name: ''
+// };
+
+// function getName(animal) {
+//   const name = animal && animal.name;
+//   return name || '이름이 없는 동물입니다.';
+// }
+
+// const name = getName(namelessDog);
+// console.log(name); // 이름이 없는 동물입니다.

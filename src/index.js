@@ -441,3 +441,115 @@
 // };
 
 // console.log(extracted);
+
+/**
+ * spread 와 rest
+ */
+// const slime = {
+//   name: '슬라임'
+// };
+
+// const cuteSlime = {
+//   name: '슬라임',
+//   attribute: 'cute'
+// };
+
+// const purpleCuteSlime = {
+//   name: '슬라임',
+//   attribute: 'cute',
+//   color: 'purple'
+// };
+
+// console.log(slime);
+// console.log(cuteSlime);
+// console.log(purpleCuteSlime);
+
+// spread
+// const slime = {
+//   name: '슬라임'
+// };
+
+// const cuteSlime = {
+//   ...slime,
+//   attribute: 'cute'
+// };
+
+// const purpleCuteSlime = {
+//   ...cuteSlime,
+//   color: 'purple'
+// };
+
+// console.log(slime);
+// console.log(cuteSlime);
+// console.log(purpleCuteSlime);
+
+// const animals = ['개', '고양이', '참새'];
+// const anotherAnimals = [...animals, '비둘기'];
+// console.log(animals);
+// console.log(anotherAnimals);
+
+// const numbers = [1, 2, 3, 4, 5];
+// const spreadNumbers = [...numbers, 1000, ...numbers];
+// console.log(spreadNumbers);
+
+//rest
+// const purpleCuteSlime = {
+//   name: '슬라임',
+//   attribute: 'cute',
+//   color: 'purple'
+// };
+// const { color, ...rest } = purpleCuteSlime;
+// console.log(color);
+// console.log(rest);
+
+// const purpleCuteSlime = {
+//   name: '슬라임',
+//   attribute: 'cute',
+//   color: 'purple'
+// };
+// const { color, ...cuteSlime } = purpleCuteSlime;
+// console.log(color);
+// console.log(cuteSlime);
+
+// const { attribute, ...slime } = cuteSlime;
+// console.log(attribute);
+// console.log(slime);
+
+// 배열에서 rest
+// const numbers = [0, 1, 2, 3, 4, 5, 6];
+// const [one, ...rest] = numbers;
+// console.log(one);
+// console.log(rest);
+
+// 함수 파라미터에서의 rest
+// function sum(...rest) {
+//   return rest;
+// }
+// const result = sum(1, 2, 3, 4, 5, 6);
+// console.log(result);
+
+// function sum(...rest) {
+//   return rest.reduce((acc, current) => acc + current, 0);
+// }
+// const result = sum(1, 2, 3, 4, 5, 6);
+// console.log(result);
+
+// 함수 인자와 spread
+// 인자 : 함수에서 값을 넣어 줄 때
+// 파라미터 : 함수에서 값을 읽을 때
+// function sum(...rest) {
+//   return rest.reduce((acc, current) => acc + current, 0);
+// }
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const result = sum(...numbers);
+// console.log(result);
+
+// 퀴즈
+// function max(...numbers) {
+//   return numbers.reduce(
+//     (acc, current) => (current > acc ? current : acc),
+//     numbers[0]
+//   );
+// }
+// const result = max(1, 2, 3, 4, 10, 5, 6, 7);
+// console.log(result);

@@ -209,3 +209,40 @@
 
 // const name = getName(namelessDog);
 // console.log(name); // 이름이 없는 동물입니다.
+
+/**
+ * 04. 함수의 기본 파라미터
+ */
+// function calculateCircleArea(r) {
+//   return Math.PI * r * r;
+// }
+
+// const area = calculateCircleArea(4);
+// console.log(area);
+
+// function calculateCircleArea(r) {
+//   return Math.PI * r * r;
+// }
+
+// const area = calculateCircleArea();
+// console.log(area);
+
+// function calculateCircleArea(r) {
+//   const radius = r || 1;
+//   return Math.PI * radius * radius;
+// }
+
+// const area = calculateCircleArea();
+// console.log(area);
+
+// function calculateCircleArea(r = 1) {
+//   return Math.PI * r * r;
+// }
+
+// const area = calculateCircleArea();
+// console.log(area);
+
+// const calculateCircleArea = (r = 1) => Math.PI * r * r;
+
+// const area = calculateCircleArea();
+// console.log(area);
